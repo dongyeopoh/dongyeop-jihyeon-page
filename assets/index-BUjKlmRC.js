@@ -183,7 +183,7 @@ To suppress this warning, you need to explicitly provide the \`palette.${t}Chann
   justify-content: center; /* 중앙 정렬 */
   align-items: center;
   background-color: rgba(255, 255, 255, 0.5); /* 흰색 반투명 */
-  transition: opacity 0.3s ease, transform 0.3s ease; /* 스크롤 시 opacity와 transform 변환 */
+  transition: opacity 0.5s ease, transform 0.8s ease; /* 스크롤 시 opacity와 transform 변환 */
   opacity: ${e=>e.opacity};
   transform: translateY(${e=>e.transform}px); /* Y축 이동 */
   pointer-events: none; /* 오버레이 뒤 요소를 클릭할 수 있도록 함 */
@@ -198,7 +198,7 @@ To suppress this warning, you need to explicitly provide the \`palette.${t}Chann
   color: #2F2120;
   margin: 10px 0 0 0;
   text-align: center;
-`,Jb=()=>{const{greeting:e}=Br,[t,n]=_.useState(1),[r,i]=_.useState(0),[o,s]=_.useState(!0),a=()=>{const l=window.pageYOffset||document.documentElement.scrollTop,u=window.innerHeight,f=Math.max(1-l/u,0),d=Math.min(l/2,u/2);n(f),i(d),l>u/1.1?s(!1):s(!0)};return _.useEffect(()=>(window.addEventListener("scroll",a),()=>window.removeEventListener("scroll",a)),[]),k.jsxs("div",{children:[k.jsx(Xb,{src:Qb}),o&&k.jsxs(qb,{opacity:t,transform:-r,children:[k.jsx(Hs,{children:e.detailTitle1}),k.jsx(Hs,{children:e.detailTitle2}),k.jsx(Us,{children:e.dday}),k.jsx(Us,{children:e.place})]}),k.jsx(Hs,{children:e.detailTitle1}),k.jsx(Hs,{children:e.detailTitle2}),k.jsx(Us,{children:e.dday}),k.jsx(Us,{children:e.place})]})},Vs=te.p`
+`,Jb=()=>{const{greeting:e}=Br,[t,n]=_.useState(1),[r,i]=_.useState(0),[o,s]=_.useState(!0),a=_.useRef(),l=()=>{const u=window.pageYOffset||document.documentElement.scrollTop,f=window.innerHeight,d=Math.max(1-u/f,0),p=Math.min(u/2,f/2);n(d),i(p),u>f/1.5?s(!1):s(!0),a.current=requestAnimationFrame(l)};return _.useEffect(()=>(a.current=requestAnimationFrame(l),()=>cancelAnimationFrame(a.current)),[]),k.jsxs("div",{children:[k.jsx(Xb,{src:Qb}),o&&k.jsxs(qb,{opacity:t,transform:-r,children:[k.jsx(Hs,{children:e.detailTitle1}),k.jsx(Hs,{children:e.detailTitle2}),k.jsx(Us,{children:e.dday}),k.jsx(Us,{children:e.place})]}),k.jsx(Hs,{children:e.detailTitle1}),k.jsx(Hs,{children:e.detailTitle2}),k.jsx(Us,{children:e.dday}),k.jsx(Us,{children:e.place})]})},Vs=te.p`
   font-family: HSSanTokki20-Regular, serif;
   font-size: 1.8rem;
   margin: 10px;
